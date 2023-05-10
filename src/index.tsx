@@ -13,7 +13,6 @@ root.render(
   </React.StrictMode>
 );
 
-
-// TODO: abc
+// TODO: install scss, tailwind, material ui
 
 reportWebVitals();
