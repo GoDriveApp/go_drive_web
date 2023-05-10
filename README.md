@@ -6,10 +6,8 @@
 
 ### Commit convention
 
-<type>(<scope>): <subject>
-<body>
-<footer>
-
+# pattern
+type<scope>: title
 - keyword shoud be wrapped in ``
 
 # commit types
