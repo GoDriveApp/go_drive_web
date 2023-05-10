@@ -7,7 +7,7 @@
 ### Commit convention
 
 # pattern
-type<scope>: title
+type(scope): title
 - keyword shoud be wrapped in ``
 
 # commit types
