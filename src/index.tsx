@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import "./style.css"
 
 import reportWebVitals from './reportWebVitals';
+import {SignIn, SignUp} from "./views";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -10,9 +11,8 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
+    <SignIn/>
   </React.StrictMode>
 );
-
-// TODO: install scss, tailwind, material ui
 
 reportWebVitals();
