@@ -1,5 +1,5 @@
 import SignInForm from "./SignInForm";
-import {LineDeco} from "../../base_components";
+import {Button, LineDeco} from "../../base_components";
 import {AuthHeader, AuthOptions} from "../../components";
 
 type SignInProps={
@@ -10,7 +10,7 @@ function SignIn (props:SignInProps){
    return(
       <main className={`${style.wrapper}`}>
          <div className={`${style.innerWrapper}`}>
-            <AuthHeader/>
+            <AuthHeader textLabel={"Login"} btnLabel={"or create an account"}/>
             <AuthOptions/>
             <LineDeco>or</LineDeco>
             <SignInForm/>

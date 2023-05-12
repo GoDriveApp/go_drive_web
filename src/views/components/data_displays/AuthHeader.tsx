@@ -1,12 +1,14 @@
-import {LinkButton, Text} from "../../base_components";
-
-function AuthHeader()
+import {Text,Button} from "../../base_components";
+type AuthHeaderProps={
+   textLabel:string
+   btnLabel:string
+}
+function AuthHeader(props:AuthHeaderProps)
 {
    return (
       <header className={`${style.wrapper}`}>
-         <Text size={style.text.size}>Login</Text>
-         <LinkButton label={"new"}/>
-         {/*<Button size={style.button.size} theme={style.button.theme} label={"or create an account"}/>*/}
+         <Text size={style.text.size}>{props.textLabel}</Text>
+         <Button size={style.button.size} theme={style.button.theme} label={props.btnLabel}/>
       </header>
    )
 }

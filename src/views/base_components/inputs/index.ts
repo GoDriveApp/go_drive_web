@@ -1,8 +1,6 @@
 import Button from "./Button"
-import Input from "./Imput";
-import LinkButton from "./LinkButton";
+import Input from "./Input";
 export {
    Button,
-   Input,
-   LinkButton
+   Input
 }

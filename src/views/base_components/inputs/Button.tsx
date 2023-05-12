@@ -17,8 +17,10 @@ function Button(props: ButtonProps) {
       <button className={`${style.wrapper} ${size.wrapper} ${theme.wrapper}`}>
          <span className={`${style.iconLeft}`}>{props.iconLeft}</span>
          <Text
-            size={style.text.size}
-            weight={style.text.weight}
+            size={size.text.size}
+            weight={size.text.weight}
+            color={theme.text.color}
+            styles={theme.text.styles}
          >
             {props.label}
          </Text>
@@ -28,20 +30,30 @@ function Button(props: ButtonProps) {
 
 const style = {
    wrapper: "relative flex justify-center",
-   span: "",
-   text: {
-      size: "sm" as "sm",
-      weight: "normal" as "normal"
-   },
    iconLeft: "absolute left-3 empty:hidden self-center"
 }
 
 const ButtonTheme = {
+   link: {
+      wrapper: "",
+      text: {
+         color: "blue" as "blue",
+         styles:"underline underline-offset-8"
+      }
+   },
    primary: {
       wrapper: "rounded border border-D",
+      text: {
+         color:"black" as "black",
+         styles:""
+      }
    },
    secondary: {
       wrapper: "bg-C",
+      text: {
+         color:"white" as "white",
+         styles:""
+      }
    }
 }
 
@@ -77,8 +89,8 @@ const ButtonSize = {
    lg: {
       wrapper: "w-full px-[50px] py-[16px]",
       text: {
-         size: "sm" as "sm",
-         weight: "normal" as "normal"
+         size: "lg" as "lg",
+         weight: "bold" as "bold"
       },
    }
 }

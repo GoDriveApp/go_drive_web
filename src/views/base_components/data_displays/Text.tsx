@@ -4,23 +4,22 @@ type TextProps = DetailedHTMLProps<HTMLAttributes<HTMLParagraphElement>, HTMLPar
    size?: keyof typeof TextSize
    weight?: keyof typeof TextWeight
    color?:keyof typeof TextColor
-   class?:string
+   styles?:string
 }
 
 function Text(props: TextProps) {
    return <p
       {...props}
-      className={`${style.text} ${TextSize[props.size ?? "base"]} ${TextWeight[props.weight ?? "normal"]} ${props.class}`}
+      className={`${style.text} ${TextSize[props.size ?? "base"]} ${TextWeight[props.weight ?? "normal"]} ${TextColor[props.color ?? "black"]} ${props.styles}`}
    >
       {props.children}
    </p>
 }
 
 const style = {
-   text: "" // TODO
+   text: ""
 }
 
-// TODO
 const TextSize = {
    "xs": "text-xs",
    "sm": "text-sm",
@@ -43,6 +42,7 @@ const TextColor = {
    "blue": "text-C",
    "white": "text-A",
    "gray": "text-D",
+   "black":"text-B"
 }
 
 export default Text

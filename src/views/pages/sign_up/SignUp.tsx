@@ -1,14 +1,28 @@
-import SIgnUpForm from "./SIgnUpForm";
+import SignUpForm from "./SignUpForm";
+import {Button, Input, LineDeco} from "../../base_components";
+import {AuthHeader, AuthOptions} from "../../components";
 
-function SignUp(){
+type SignInProps={
+
+}
+
+function SignIn (props:SignInProps){
    return(
-      <main className={`${style.signup}`}>
-         <SIgnUpForm/>
+      <main className={`${style.wrapper}`}>
+         <div className={`${style.innerWrapper}`}>
+            <AuthHeader textLabel={"Create an account"} btnLabel={"or login"}/>
+            <AuthOptions/>
+            <LineDeco>or</LineDeco>
+            <SignUpForm/>
+         </div>
       </main>
    )
 }
 
+// w-[400px]
 const style = {
-   signup: "flex justify-center items-center h-[100vh]",
+   wrapper: "flex justify-center items-center h-[100vh]",
+   innerWrapper: "w-[400px] flex flex-col gap-[30px]",
 }
-export default SignUp
+export default SignIn
+export {type SignInProps}
